@@ -1,2 +1,7 @@
 <h3>servers works!</h3>
-<button class="btn btn-primary" [disabled]="!allowNewServer">click</button>
+<input type="text" (input)="updateTxt($event)"/>
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="fun()">click</button>
+{{msg}}
+<h2>tow way bindings</h2>
+<input type="text" [(ngModel)]="msg"/>
+<app-server *ngFor="let arr of array" ></app-server>
